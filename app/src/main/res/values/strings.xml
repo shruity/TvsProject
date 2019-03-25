@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TvsProject</string>
+    <string name="search">Search</string>
+    <string name="details">Details</string>
+
+    <string name="API_KEY">AIzaSyAMcFzEHOk0JPChA_pMULcH1LKOYVHYVBw</string>
+</resources>

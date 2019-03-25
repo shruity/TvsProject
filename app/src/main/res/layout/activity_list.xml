@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListActivity"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btChart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="Salary Chart"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/btMap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:text="City Map"
+            android:layout_marginStart="5dp"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvUserList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>

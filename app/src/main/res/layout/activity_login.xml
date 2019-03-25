@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="20dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User name"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/button_bg"
+        android:text="LOGIN"
+        android:textSize="15sp"/>
+
+</LinearLayout>

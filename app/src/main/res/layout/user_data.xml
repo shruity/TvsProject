@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llData"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvDesignation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Designation"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>
