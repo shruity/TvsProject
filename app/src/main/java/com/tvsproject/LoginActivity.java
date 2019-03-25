@@ -109,18 +109,9 @@ public class LoginActivity extends AppCompatActivity {
         RequestBody body = RequestBody.create(JSON, json);
         Request.Builder builder = new Request.Builder();
         builder.url(url);
-//        if (!TextUtils.isEmpty(accessKey)) {
-//            builder.addHeader(Constants.LAZYPAY_ACCESS_TOKEN, accessKey);
-//        }
-//        if (!TextUtils.isEmpty(signature)) {
-//            builder.addHeader(SIGNATURE, signature);
-//        }
-
         builder.post(body);
         Request request = builder.build();
         okhttp3.Response response = client.newCall(request).execute();
-
-        Log.e("builder", builder.toString());
         return response.body().string();
     }
 
@@ -145,7 +136,6 @@ public class LoginActivity extends AppCompatActivity {
             String response = null;
             try {
                 response = postdata(url, jsonObject.toString());
-                Log.e("response body", response + "");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -155,7 +145,6 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            Log.e("ssss", s + "");
             if (dialog.isShowing())
                 dialog.dismiss();
 

@@ -79,20 +79,11 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
         try {
             if (data != null) {
                 JSONObject jsonObject = new JSONObject(data);
-
-                Log.e("hassss object", String.valueOf(jsonObject.has("TABLE_DATA")));
                 if (jsonObject.has("TABLE_DATA")) {
-                    Log.e("jj", jsonObject.getString("TABLE_DATA") + "");
                     JSONObject tableData = new JSONObject(jsonObject.getString("TABLE_DATA"));
-                    Log.e("tabledata", String.valueOf(tableData) + "");
                     JSONArray jsonArray = tableData.getJSONArray("data");
-                    Log.e("jsonarray", String.valueOf(jsonArray) + "");
-
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        Log.e("arrayy", String.valueOf(jsonArray.get(i)) + "");
                         JSONArray json = (JSONArray) jsonArray.get(i);
-                        Log.e("json", String.valueOf(json));
-                        Log.e("json", String.valueOf(json.get(0)));
                         UserModel userModel = new UserModel();
                         userModel.setName(json.getString(0));
                         userModel.setDesignation(json.getString(1));
@@ -101,7 +92,6 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                         userModel.setDate(json.getString(4));
                         userModel.setSalary(json.getString(5));
                         LatLng latlng = getLatLng(json.getString(2));
-                        Log.e("latlng",latlng+"");
                         if (latlng != null){
                             userModel.setLatLng(latlng);
                             userModelsList.add(userModel);
@@ -132,8 +122,6 @@ public class ListActivity extends AppCompatActivity implements View.OnClickListe
                 for(Address a : addresses){
                     if(a.hasLatitude() && a.hasLongitude()){
                         ll.add(new LatLng(a.getLatitude(), a.getLongitude()));
-                        Log.e("latt", String.valueOf(a.getLatitude()));
-                        Log.e("lngg", String.valueOf(a.getLongitude()));
                         latitude = a.getLatitude();
                         longitude = a.getLongitude();
 
